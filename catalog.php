@@ -1,12 +1,11 @@
 <?php
 $root = "";
 require "structure/head.php";
-print "<script>giveTitle('Hjem')</script>";
+print "<script>giveTitle('Katalog')</script>";
 require "structure/nav.php";
 ?>
 <main>
-<header>
-</header>
+
 </main>
 <?php
 require "structure/footer.php"

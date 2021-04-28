@@ -1,0 +1,78 @@
+/*
+Made w/ ♥ by Artx999
+If you steal this, you owe me a blowie ;)
+ */
+:root {
+    --not-quite-black: #23272a;
+    --nav-height: 5em;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+html, body {
+    font-family: "IBM Plex Mono";
+    margin: 0;
+    box-sizing: border-box;
+}
+.view-width {
+    width: 80vw;
+}
+.flex-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-box-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav {
+    background-color: var(--not-quite-black);
+    font-family: "Square Boi";
+    height: var(--nav-height);
+}
+nav #logo {
+    height: calc(var(--nav-height) - 1em);
+}
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 1em;
+    list-style-type: none;
+    font-size: 2.5rem;
+    padding: 0;
+}
+nav ul li {
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+main {
+    min-height: calc(100vh - var(--nav-height));
+}
+header {
+    height: calc(100vh - var(--nav-height));
+    background-image: url("../documentation/datashop-header.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+}
+footer {
+    background-color: var(--not-quite-black);
+    height: 10em;
+    font-family: "Square Boi";
+    color: white;
+}
+footer a {
+    text-decoration: none;
+    color: white;
+}
+footer #footer-name {
+    font-size: 4rem;
+}
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
