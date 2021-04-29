@@ -5,7 +5,7 @@ print "<script>giveTitle('Hjem')</script>";
 require "structure/nav.php";
 ?>
 <main>
-<header>
+<header  id="header-home">
 </header>
 </main>
 <?php
