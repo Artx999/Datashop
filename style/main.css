@@ -3,17 +3,32 @@ Made w/ ♥ by Artx999
 If you steal this, you owe me a blowie ;)
  */
 
+/* Font-faces */
+@font-face {
+    font-family: "Square Boi";
+    src: url("../fonts/square-boi.ttf");
+}
+
+/* Global shit */
 :root {
+    --primary: #f28322;
     --not-quite-black: #23272a;
+    --black: #000000;
+    --white: #ffffff;
+    --dark-orange: #bf702a;
     --nav-height: 5em;
 }
 *, *::before, *::after {
     box-sizing: inherit;
 }
 html, body {
-    font-family: "IBM Plex Mono";
+    font-family: "IBM Plex Mono", monospace;
     margin: 0;
     box-sizing: border-box;
+}
+h1 {
+    font-family: "Square Boi";
+    font-size: 6rem;
 }
 
 /* Default classes */
@@ -49,8 +64,22 @@ nav ul {
     padding: 0;
 }
 nav ul li a {
+    position: relative;
     text-decoration: none;
     color: white;
+}
+nav ul li a .uil-shopping-cart {
+    color: var(--primary);
+}
+/* Definitely needs more work */
+nav ul li #cart-quantity {
+    position: absolute;
+    top: -1em; right: -1em;
+    background-color: var(--white);
+    color: var(--primary);
+    font-size: 1rem;
+    padding: 0.3em 0.5em;
+    border: var(--not-quite-black) 0.2em solid;
 }
 
 /* Main */
@@ -64,6 +93,9 @@ footer {
     height: 10em;
     font-family: "Square Boi";
     color: white;
+}
+footer h1 {
+    font-size: 2.5rem;
 }
 footer a {
     text-decoration: none;
@@ -92,7 +124,7 @@ main#catalog section {
 }
 .catalog-product {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, 1fr);
     border: 1px black solid;
     font-family: "Square Boi";
 }
@@ -104,6 +136,40 @@ main#catalog section {
 }
 .catalog-product img {
     height: 10em;
+}
+
+/* Cart */
+#checkout-page {
+    display: none;
+    width: 100%;
+    top: calc(var(--nav-height) + 2em);
+    background-color: var(--not-quite-black);
+    color: var(--white);
+}
+
+/* Orders */
+#orders-output {
+    display: none;
+}
+
+/* Contact */
+#map {
+    height: 50vh;
+    width: 50%;
+    float: right;
+}
+#contact-info {
+    width: 50%;
+    display: inline-block;
+}
+
+/* Formats */
+#formats-table {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+#formats-table p {
+    margin: 1rem;
 }
 
 /* +/- button */

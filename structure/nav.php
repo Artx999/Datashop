@@ -4,7 +4,7 @@
         <ul>
             <li><a href="<?php print $root ?>catalog.php">Katalog</a></li>
             <li><a href="<?php print $root ?>orders.php">Ordreoversikt</a></li>
-            <li><a href="<?php print $root ?>cart.php"><i class="uil uil-shopping-cart"></i></a></li>
+            <li><a id="cart" href="<?php print $root ?>cart.php"><i class="uil uil-shopping-cart"></i><?php if (isset($_SESSION["cart"])) print "<div id='cart-quantity'>" . array_sum($_SESSION["cart"]) . "</div>" ?></a></li>
         </ul>
     </div>
 </nav>
